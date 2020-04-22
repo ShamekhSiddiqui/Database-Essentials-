@@ -48,7 +48,6 @@ CONTRAINT pkeventreq PRIMARY KEY(eventno)
 CONTRAINT fkeventreq_custno FOREIGN KEY(custno) REFERENCES customer(custno)
 CONTRAINT fkeventreq_facno FOREIGN KEY(facno) REFERENCES facility(facno)
 CONSTRAINT checkeventreq_status CHECK(status IN('APPROVED','PENDING','DENIED'))
---CONSTRAINT checkeventreq_datereq CHECK(datereq < dateheld)
 );
 
 
